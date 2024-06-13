@@ -1,0 +1,90 @@
+h2 {
+  margin-bottom: 20px;
+}
+
+.post {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-info {
+  flex-grow: 1;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.timestamp {
+  display: block;
+  font-size: 0.8em;
+  color: #777;
+}
+
+.post-menu button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post-tags {
+  margin-bottom: 10px;
+}
+
+.tag2 {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 0.8em;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.show-more {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.show-more button {
+  background: none;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+  font-size: 1em;
+}
