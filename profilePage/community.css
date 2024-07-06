@@ -76,6 +76,29 @@ h2 {
   margin-right: 10px;
 }
 
+.comment-box {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  resize: none;
+  outline: none;
+}
+
+.comment-box-container {
+  margin-top: 20px;
+}
+
+.comment-button {
+  margin-top: 10px;
+  background-color: #FF7B53;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .show-more {
   text-align: center;
   margin: 20px 0;

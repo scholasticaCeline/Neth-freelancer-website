@@ -248,7 +248,11 @@
                             </div>
                             <div class="post-actions">
                                 <button><img src="../Assets/like.svg" alt="Like"></button>
-                                <button><img src="../Assets/comment.svg" alt="Comment"></button>
+                                <button><img src="../Assets/comment.svg" alt="Comment" data-id="post1"></button>
+                            </div>
+                            <div class="comment-box-container">
+                                <textarea class="comment-box" placeholder="Write a comment..."></textarea>
+                                <button class="comment-button">Submit</button>
                             </div>
                         </div>
                     </section>
@@ -275,8 +279,13 @@
                             </div>
                             <div class="post-actions">
                                 <button><img src="../Assets/like.svg" alt="Like"></button>
-                                <button><img src="../Assets/comment.svg" alt="Comment"></button>
+                                <button><img src="../Assets/comment.svg" alt="Comment" data-id="post1"></button>
                             </div>
+                            <div class="comment-box-container">
+                                <textarea class="comment-box" placeholder="Write a comment..."></textarea>
+                                <button class="comment-button">Submit</button>
+                            </div>
+
                         </div>
                         <div class="post">
                             <div class="post-header">
@@ -298,8 +307,13 @@
                             </div>
                             <div class="post-actions">
                                 <button><img src="../Assets/like.svg" alt="Like"></button>
-                                <button><img src="../Assets/comment.svg" alt="Comment"></button>
+                                <button><img src="../Assets/comment.svg" alt="Comment" data-id="post1"></button>
                             </div>
+                            <div class="comment-box-container">
+                                <textarea class="comment-box" placeholder="Write a comment..."></textarea>
+                                <button class="comment-button">Submit</button>
+                            </div>
+
                         </div>
                     </section>
                     </div>
@@ -346,6 +360,39 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../templates/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to create and insert the comment box
+            function createCommentBox(postId) {
+                const postElement = document.querySelector(`[data-id="${postId}"]`).closest('.post');
+                let commentBox = postElement.querySelector('.comment-box');
+
+                if (!commentBox) {
+                    commentBox = document.createElement('div');
+                    commentBox.className = 'comment-box';
+                    commentBox.style.display = 'none'; // Ensure the comment box is initially hidden
+                    commentBox.innerHTML = `
+                        <textarea class="comment-input" placeholder="Write your comment..."></textarea>
+                        <button class="submit-comment">Submit</button>
+                    `;
+                    postElement.appendChild(commentBox);
+                } else {
+                    commentBox.style.display = commentBox.style.display === 'none' ? 'block' : 'none';
+                }
+            }
+
+            // Attach click event to comment icons
+            const commentIcons = document.querySelectorAll('.comment-icon');
+            commentIcons.forEach(icon => {
+                icon.addEventListener('click', function() {
+                    const postId = this.getAttribute('data-id');
+                    createCommentBox(postId);
+                });
+            });
+        });
+
+    </script>
+
 
 </body>
 

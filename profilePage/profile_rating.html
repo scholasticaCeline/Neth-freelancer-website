@@ -228,7 +228,24 @@
                         <div>59 reviews</div>
                       </div>
 
+                    <button class="add-rating-btn">Add Rating</button>
+                      <div id="ratingBox" class="rating-box" style="display: none;">
+                          <h2>Add Your Rating</h2>
+                          <div class="rating-input">
+                              <!-- Star rating input, replace with a proper rating component as needed -->
+                              <span class="star" data-value="1">★</span>
+                              <span class="star" data-value="2">★</span>
+                              <span class="star" data-value="3">★</span>
+                              <span class="star" data-value="4">★</span>
+                              <span class="star" data-value="5">★</span>
+                          </div>
+                          <textarea class="comment-input" placeholder="Write your comment..."></textarea>
+                          <button class="submit-rating">Submit</button>
+                      </div>
+
+                        <br/>
                       <div class="reviews-container">
+
                         <div class="review-card">
                           <div class="review-header">
                             <img src="profile-placeholder.png" alt="Client Image">
@@ -325,7 +342,59 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../templates/navbar.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Function to show the rating box
+                function showRatingBox() {
+                    const ratingBox = document.getElementById('ratingBox');
+                    if (ratingBox) {
+                        ratingBox.style.display = 'block';
+                    }
+                }
 
+                // Attach click event listener to the "Add Rating" button
+                const addRatingBtn = document.querySelector('.add-rating-btn');
+                if (addRatingBtn) {
+                    addRatingBtn.addEventListener('click', showRatingBox);
+                }
+
+                // Handle star selection
+                document.querySelectorAll('.rating-box .star').forEach(star => {
+                    star.addEventListener('click', function() {
+                        const clickedValue = parseInt(this.getAttribute('data-value'));
+
+                        // Remove selected class from all stars
+                        document.querySelectorAll('.rating-box .star').forEach(s => s.classList.remove('selected'));
+
+                        // Add selected class to clicked star and all preceding stars
+                        for (let i = 1; i <= clickedValue; i++) {
+                            document.querySelector(`.rating-box .star[data-value="${i}"]`).classList.add('selected');
+                        }
+                    });
+                });
+
+                // Submit rating
+                document.querySelector('.submit-rating').addEventListener('click', function() {
+                    const selectedStar = document.querySelector('.rating-box .star.selected');
+                    const comment = document.querySelector('.rating-box .comment-input').value;
+
+                    if (selectedStar && comment) {
+                        const rating = selectedStar.getAttribute('data-value');
+                        console.log('Rating:', rating);
+                        console.log('Comment:', comment);
+
+                        // You can add your AJAX code here to send the rating and comment to the server
+
+                        // Hide the rating box after submission
+                        document.getElementById('ratingBox').style.display = 'none';
+                    } else {
+                        alert('Please select a rating and write a comment.');
+                    }
+                });
+            });
+        </script>
+
+        
 </body>
 
 </html>

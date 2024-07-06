@@ -137,6 +137,26 @@
   margin-bottom: 60px;
 }
 
+.comment-box {
+  margin-top: 10px;
+  display: none;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.submit-comment {
+  display: block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
 .detail {
   display: flex;
   margin-bottom: 5px;

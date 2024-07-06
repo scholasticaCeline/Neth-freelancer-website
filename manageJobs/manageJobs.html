@@ -1,4 +1,3 @@
-<!--Template guys-->
 <!doctype html>
 <html lang="en">
     <head>
@@ -11,7 +10,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
 
-        <title>Neth - Dashboard</title>
+        <title>Neth - Client Dashboard</title>
 
         <!-- fonts -->
         <!-- Rubik Font-->
@@ -31,7 +30,7 @@
 
         <!-- Custom styles for this template-->
         <link href="../templates/navbars.css" rel="stylesheet" />
-        <link rel="stylesheet" href="forum.css" />
+        <link rel="stylesheet" href="style.css"/>
     </head>
 
     <body id="page-top">
@@ -47,29 +46,10 @@
                     class="sidebar-brand d-flex align-items-center justify-content-center"
                     href="index.html"
                 >
-                    <div class="sidebar-brand-icon rotate-n-15">
-                        <i class="fas fa-laugh-wink"></i>
-                    </div>
                     <div class="sidebar-brand-text mx-3">
                         <strong>NETH</strong>
                     </div>
                 </a>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider my-0" />
-
-                <!-- Nav Item - Dashboard -->
-                <li class="nav-item">
-                    <a class="nav-link" href="../profilePage/profile.html">
-                        <img
-                            src="../Assets/homeIcon.svg"
-                            alt="home"
-                            width="25px"
-                            height="25px"
-                        />
-                        <span>&nbsp;&nbsp;Profile</span></a
-                    >
-                </li>
 
                 <!-- Divider -->
                 <hr class="sidebar-divider" />
@@ -78,28 +58,28 @@
                 <div class="sidebar-heading">Features</div>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../searchJob/search.html">
+                    <a class="nav-link" href="../searchFreelancers/search.html">
                         <img
                             src="../Assets/search-jobIcon.svg"
-                            alt="search-jobs"
+                            alt="post-jobs"
                             width="25px"
                             height="25px"
                         />
-                        <span>&nbsp;&nbsp;Search Jobs</span>
+                        <span
+                            >&nbsp;&nbsp;Search Freelancers</span
+                        >
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../forumPage/forum.html">
+                    <a class="nav-link" href="../manageJobs/manageJobs.html">
                         <img
-                            src="../Assets/forumIcon_active.svg"
-                            alt="search-jobs"
+                            src="../Assets/search-jobIcon_active.svg"
+                            alt="manage-jobs"
                             width="25px"
                             height="25px"
                         />
-                        <span style="color: #ff7b53"
-                            >&nbsp;&nbsp;Community</span
-                        >
+                        <span style="color: #ff7b53">&nbsp;&nbsp;Manage Freelancers</span>
                     </a>
                 </li>
             </ul>
@@ -278,7 +258,7 @@
                                 >
                                     <span
                                         class="mr-2 d-none d-lg-inline text-gray-600 small"
-                                        >Alice Doe</span
+                                        >John Doe</span
                                     >
                                     <img
                                         class="img-profile rounded-circle"
@@ -292,7 +272,7 @@
                                 >
                                     <a
                                         class="dropdown-item"
-                                        href="../profilePage/profile.html"
+                                        href="../clientProfilePage/profile.html"
                                     >
                                         Profile
                                     </a>
@@ -314,196 +294,50 @@
                     <!-- End of Topbar -->
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
-                        <div class="header">
-                            <h2>
-                                Welcome to our <br />
-                                Community Forum!
-                            </h2>
-                            <p>
-                                Connect with other freelancers, share
-                                experiences, and grow together.
-                            </p>
-                            <div class="search-container">
-                                <input
-                                    type="text"
-                                    placeholder="Search for topics..."
-                                    class="search-input"
-                                />
-                                <button class="search-button">Search</button>
-                            </div>
-                            <div class="forum-button">
-                                <button class="button button-1">
-                                    Join the Conversation
-                                </button>
-                                <button class="button button-2">
-                                    Create a Post
-                                </button>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="post">
-                                <div class="add-topics">
-                                    <img src="../Assets/profile.svg" />
-                                    <input
-                                        type="text"
-                                        placeholder="Add your topics..."
-                                        class="search-input"
-                                    />
-                                    <button>Add</button>
-                                </div>
-                                <div class="topic1">
-                                    <div class="detail">
-                                        <img src="../Assets/profile.svg" />
-                                        <div class="name">
-                                            <span class="username"
-                                                >John Doe</span
-                                            >
-                                            <span class="time">3h ago</span>
-                                        </div>
+                        <section class="freelancers-list">
+                            <h2>Freelancers</h2><br/>
+                            <ul>
+                                <li class="freelancer">
+                                    <div class="freelancer-info">
+                                        <h3>John Doe</h3>
+                                        <p>Graphic Designer</p>
                                     </div>
-                                    <img
-                                        src="../Assets/background_community1.png"
-                                    />
-                                    <p>
-                                        Excited to start a new project!
-                                        #FreelanceLife
-                                    </p>
-                                    <div class="tag">
-                                        <div class="tags">
-                                            <p>Freelancing</p>
-                                        </div>
-                                        <div class="tags">
-                                            <p>Excitement</p>
-                                        </div>
+                                    <button class="view-orders-btn">View Orders</button>
+                                    <div class="orders-list">
+                                        <h4>Orders for John Doe</h4>
+                                        <ul>
+                                            <li>
+                                                <h5>Order #1</h5>
+                                                <p>Description: Design logo for new startup</p>
+                                                <p>Status: In Progress</p>
+                                            </li>
+                                            <li>
+                                                <h5>Order #2</h5>
+                                                <p>Description: Edit promotional video</p>
+                                                <p>Status: Completed</p>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="icon">
-                                        <img src="../Assets/like.svg" />
-                                        <img
-                                            src="../Assets/comment.svg"
-                                            class="comment-icon"
-                                            data-id="post1"
-                                        />
+                                </li>
+                                <li class="freelancer">
+                                    <div class="freelancer-info">
+                                        <h3>Jane Smith</h3>
+                                        <p>Web Developer</p>
                                     </div>
-                                </div>
-                                <div class="topic1">
-                                    <div class="detail">
-                                        <img src="../Assets/profile.svg" />
-                                        <div class="name">
-                                            <span class="username"
-                                                >John Doe</span
-                                            >
-                                            <span class="time">1d ago</span>
-                                        </div>
+                                    <button class="view-orders-btn">View Orders</button>
+                                    <div class="orders-list">
+                                        <h4>Orders for Jane Smith</h4>
+                                        <ul>
+                                            <li>
+                                                <h5>Order #1</h5>
+                                                <p>Description: Build e-commerce website</p>
+                                                <p>Status: Pending</p>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <img
-                                        src="../Assets/background_community1.png"
-                                    />
-                                    <p>
-                                        Looking for inspiration for my next
-                                        design project
-                                    </p>
-                                    <div class="tag">
-                                        <div class="tags">
-                                            <p>Design</p>
-                                        </div>
-                                        <div class="tags">
-                                            <p>Inspiration</p>
-                                        </div>
-                                    </div>
-                                    <div class="icon">
-                                        <img src="../Assets/like.svg" />
-                                        <img
-                                            src="../Assets/comment.svg"
-                                            class="comment-icon"
-                                            data-id="post1"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="topic1">
-                                    <div class="detail">
-                                        <img src="../Assets/profile.svg" />
-                                        <div class="name">
-                                            <span class="username">John Doe</span>
-                                            <span class="time">3h ago</span>
-                                        </div>
-                                    </div>
-                                    <img
-                                        src="../Assets/background_community1.png"
-                                    />
-                                    <p>
-                                        Excited to start a new project!
-                                        #FreelanceLife
-                                    </p>
-                                    <div class="tag">
-                                        <div class="tags">
-                                            <p>Freelancing</p>
-                                        </div>
-                                        <div class="tags">
-                                            <p>Excitement</p>
-                                        </div>
-                                    </div>
-                                    <div class="icon">
-                                        <img src="../Assets/like.svg" />
-                                        <img
-                                            src="../Assets/comment.svg"
-                                            class="comment-icon"
-                                            data-id="post1"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sort">
-                                <input
-                                    type="text"
-                                    placeholder="Search for topics..."
-                                    class="search-input"
-                                />
-                                <p class="title1">Sort by</p>
-                                <div class="option-select">
-                                    <select>
-                                        <option value="Recent">Recent</option>
-                                        <option value="Trending">
-                                            Trending
-                                        </option>
-                                        <option value="helpful">Helpful</option>
-                                    </select>
-                                </div>
-                                <p class="title2">Tags</p>
-                                <div class="tag-row">
-                                    <div class="tagss">
-                                        <p>Freelancing</p>
-                                    </div>
-                                    <div class="tagss">
-                                        <p>Excitement</p>
-                                    </div>
-                                </div>
-                                <div class="tag-row">
-                                    <div class="tagss">
-                                        <p>Designing</p>
-                                    </div>
-                                    <div class="tagss">
-                                        <p>Nature</p>
-                                    </div>
-                                </div>
-                                <div class="tag-row">
-                                    <div class="tagss">
-                                        <p>Fun</p>
-                                    </div>
-                                    <div class="tagss">
-                                        <p>Colorful</p>
-                                    </div>
-                                </div>
-                                <div class="tag-row">
-                                    <div class="tagss">
-                                        <p>Inspiration</p>
-                                    </div>
-                                    <div class="tagss">
-                                        <p>Tips and Tricks</p>
-                                    </div>
-                                </div>
-                                <button class="button-search">Search</button>
-                            </div>
-                        </div>
+                                </li>
+                            </ul>
+                        </section>
                     </div>
                     <!-- /.container-fluid -->
                 </div>
@@ -576,40 +410,5 @@
 
         <!-- Custom scripts for all pages-->
         <script src="../templates/navbar.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Function to create and insert the comment box
-                function createCommentBox(postId) {
-                    const postElement = document
-                        .querySelector(`[data-id="${postId}"]`)
-                        .closest(".topic1");
-                    let commentBox = postElement.querySelector(".comment-box");
-
-                    if (!commentBox) {
-                        commentBox = document.createElement("div");
-                        commentBox.className = "comment-box";
-                        commentBox.innerHTML = `
-                        <textarea class="comment-input" placeholder="Write your comment..."></textarea>
-                        <button class="submit-comment">Submit</button>
-                    `;
-                        postElement.appendChild(commentBox);
-                    } else {
-                        commentBox.style.display =
-                            commentBox.style.display === "none"
-                                ? "block"
-                                : "none";
-                    }
-                }
-
-                // Attach click event to comment icons
-                const commentIcons = document.querySelectorAll(".comment-icon");
-                commentIcons.forEach((icon) => {
-                    icon.addEventListener("click", function () {
-                        const postId = this.getAttribute("data-id");
-                        createCommentBox(postId);
-                    });
-                });
-            });
-        </script>
     </body>
 </html>
